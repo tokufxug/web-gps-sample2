@@ -53,15 +53,15 @@ function getGpsData()
     let type = getParam('type');
     if (type === "st")
     {
-        arr.push(new GpsData("自宅", 34.647575, 135.534916));
-        arr.push(new GpsData("寺田町駅",  34.647499, 135.524093));
-        arr.push(new GpsData("天王寺駅",  34.646332, 135.515234));
+        arr.push(new GPSData("自宅", 34.647575, 135.534916));
+        arr.push(new GPSData("寺田町駅",  34.647499, 135.524093));
+        arr.push(new GPSData("天王寺駅",  34.646332, 135.515234));
         return arr;
     }
     else if (type === "planet")
     {
-        arr.push(new GpsData("本社", 35.375297, 140.362102));
-        arr.push(new GpsData("エクセルハイムA棟", 35.527001, 140.324502));
+        arr.push(new GPSData("本社", 35.375297, 140.362102));
+        arr.push(new GPSData("エクセルハイムA棟", 35.527001, 140.324502));
         return arr;
     }
     arr.push(new GPSData("L", 33.789589, -118.313876));
