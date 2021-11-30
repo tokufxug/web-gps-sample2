@@ -1,30 +1,13 @@
 'use strict';
-class LocationARModelViewer {
-    static loadFinished(){
-       LocationARCommon.loadAnalytics();
-    }
-}
-window.onload = LocationARModelViewer.loadFinished;
-
 let gps = null;
-let timerId = -1;
 function init()
 {
-    if (document.getElementById("not-access").style.display === 'block')
-    {
-        clearInterval(timerId);
-        return;
-    }
-    else if (document.getElementById("ar-view").style.display === 'block'
-        && document.getElementById("search-gps").style.display === 'none')
-    {
-        gps = new GPS(getGpsData(), GPS.LANGUAGE_ENGLISH);
-        gps.successFunc = success;
-        gps.distanceWithinRange = 200;
-        gps.start();
-        document.getElementById("search-gps").style.display = 'block';
-        clearInterval(timerId);
-    }
+    Common.loadAnalytics();
+    gps = new GPS(getGpsData(), GPS.LANGUAGE_ENGLISH);
+    gps.successFunc = success;
+    gps.distanceWithinRange = 200;
+    gps.start();
+    document.getElementById("search-gps").style.display = 'block';
 }
 
 function success(g)
@@ -80,4 +63,4 @@ function getParam(name) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
  }
-timerId = setInterval(init, 250);
+ window.onload = init;
