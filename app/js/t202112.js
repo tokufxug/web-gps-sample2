@@ -44,7 +44,7 @@ function success(g)
     {
         document.getElementById("search-gps").style.display = 'block';
         document.getElementById("found-gps").style.display = 'none';
-        document.getElementById("search-gps").innerHTML = "Detecting Shop area..." + info;
+        document.getElementById("search-gps").innerHTML = "Detecting Shop area...<br>" + info;
     }
 }
 function getGpsData()
