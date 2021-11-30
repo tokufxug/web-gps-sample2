@@ -1,4 +1,10 @@
 'use strict';
+class LocationARModelViewer {
+    static loadFinished(){
+       LocationARCommon.loadAnalytics();
+    }
+}
+window.onload = LocationARModelViewer.loadFinished;
 
 let gps = null;
 let timerId = -1;
@@ -24,7 +30,6 @@ function init()
 function success(g)
 {
     let isFound = false;
-    let info = "";
     for (let i = 0; i < g.targetGpsDataArray.length; i++)
     {
          let data = gps.targetGpsDataArray[i];
@@ -32,7 +37,6 @@ function success(g)
          {
             isFound = true;
          }
-         info+= data.name + ":<b>" + data.dtg + "メートル</b><br>";
     }
 
     if (isFound)
@@ -44,7 +48,6 @@ function success(g)
     {
         document.getElementById("search-gps").style.display = 'block';
         document.getElementById("found-gps").style.display = 'none';
-        document.getElementById("search-gps").innerHTML = "Detecting Shop area...<br>" + info;
     }
 }
 function getGpsData()
