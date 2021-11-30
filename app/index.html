@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta name="application-name" content="GPS Demo">
+  <meta name="robots" content="noindex">
+  <meta name="robots" content="nosnippet">
+  <meta name="robots" content="nofollow">
+  <meta name="robots" content="noarchive">
+  <meta name="googlebot" content="noindex">
+  <meta name="googlebot" content="nosnippet">
+  <meta name="googlebot-news" content="noindex">
+  <meta name="googlebot-news" content="nosnippet">
+  <link rel="stylesheet" type="text/css" href="../css/locationar-modelviewer.css">
+  <title>GPS Demo</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script> 
+  <!-- 
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  -->
+  <script>const GTAG_ID = '';</script>
+  <script src="../js/common.js"></script>
+  <script src="../js/modelviewer.js"></script>
+  <script src="../js/gps.js"></script>
+  <script src="js/t202112.js"></script>
+</head>
+<body>
+  <div id="not-access" style="display:none">
+	  Please experience it at the store.
+  </div>
+  <div id="ar-view" style="display:none">
+    <div id="search-gps" style="display:none">
+      Detecting Shop area...
+    </div>
+    <div id="found-gps" style="display:none">
+      <model-viewer 
+            src="https://tokufxug.github.io/ModelViewerGA/demo/model-viewer-demo/Broken_Steampunk_Clock.glb" 
+            ios-src="https://tokufxug.github.io/ModelViewerGA/demo/model-viewer-demo/Broken_Steampunk_Clock.usdz"
+            ar ar-modes="quick-look scene-viewer webxr" 
+            environment-image="neutral"
+            camera-controls
+            autoplay>
+      </model-viewer>
+    </div>
+  </div>
+</body>
+</html>
