@@ -32,7 +32,7 @@ function success(g)
          {
             isFound = true;
          }
-         info+= data.name + ":<b>" + data.dtg + "メートル</b>";
+         info+= data.name + ":<b>" + data.dtg + "メートル</b><br>";
     }
 
     if (isFound)
@@ -44,7 +44,7 @@ function success(g)
     {
         document.getElementById("search-gps").style.display = 'block';
         document.getElementById("found-gps").style.display = 'none';
-        document.getElementById("search-gps").innerHTML = info;
+        document.getElementById("search-gps").innerHTML = "Detecting Shop area..." + info;
     }
 }
 function getGpsData()
