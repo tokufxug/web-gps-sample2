@@ -32,7 +32,7 @@ function success(g)
          {
             isFound = true;
          }
-         info+= data.name + ":<b>" + data.dtg + "メートル</b>;
+         info+= data.name + ":<b>" + data.dtg + "メートル</b>";
     }
 
     if (isFound)
